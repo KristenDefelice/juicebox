@@ -27,7 +27,6 @@ async function getAllUsers() {
     }
   }
 
-  // and export them
   module.exports = {
     client,
     getAllUsers,
