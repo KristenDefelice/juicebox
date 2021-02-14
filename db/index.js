@@ -26,7 +26,7 @@ async function getAllUsers() {
       throw error;
     }
   }
-
+//export
   module.exports = {
     client,
     getAllUsers,
