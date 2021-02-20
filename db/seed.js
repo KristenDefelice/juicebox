@@ -11,7 +11,7 @@ const {
     getPostsByTagName
   } = require('./index');
   
-  async function dropTables() {
+async function dropTables() {
     try {
       console.log("Starting to drop tables...");
       await client.query(`
@@ -26,9 +26,9 @@ const {
       console.error("Error dropping tables!");
       throw error;
     }
-  }
+}
   
-  async function createTables() {
+async function createTables() {
     try {
       console.log("Starting to build tables...");
   
@@ -67,9 +67,9 @@ const {
       console.error("Error building tables!");
       throw error;
     }
-  }
+}
   
-  async function createInitialUsers() {
+async function createInitialUsers() {
     try {
       console.log("Starting to create users...");
   
@@ -88,9 +88,9 @@ const {
       console.error("Error creating users!");
       throw error;
     }
-  }
+}
   
-  async function createInitialPosts() {
+async function createInitialPosts() {
     try {
       const [albert, sandra, glamgal] = await getAllUsers();
   
@@ -120,9 +120,9 @@ const {
       console.log("Error creating posts!");
       throw error;
     }
-  }
+}
   
-  async function rebuildDB() {
+async function rebuildDB() {
     try {
       client.connect();
   
@@ -134,9 +134,9 @@ const {
       console.log("Error during rebuildDB")
       throw error;
     }
-  }
+}
   
-  async function testDB() {
+async function testDB() {
     try {
       console.log("Starting to test database...");
   
@@ -185,7 +185,7 @@ const {
       console.log("Error during testDB");
       throw error;
     }
-  }
+}
   
   
   rebuildDB()
